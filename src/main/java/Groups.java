@@ -25,10 +25,10 @@ public class Groups {
 
 
     }
-    private static void addOffice(Groups o) {
+    private static void addGroup(Groups o) {
         groups.add(o);
     }
-    private static void getOfficesFromDB() {
+    private static void getGroupsFromDB() {
         Connection con = Connect.connect();
         try {
             Statement statement = con.createStatement();
@@ -40,7 +40,7 @@ public class Groups {
                 nGroups.CitiesId=rs.getInt(4);
                 nGroups.Name=rs.getString(2);
                 if(!groups.contains(nGroups)) {
-                    addOffice(nGroups);
+                    addGroup(nGroups);
                 }
 
             }
@@ -53,8 +53,8 @@ public class Groups {
             Connect.closeConnection(con);
         }
     }
-    public static Groups getOffice(int ID) {
-        getOfficesFromDB();
+    public static Groups getGroups(int ID) {
+        getGroupsFromDB();
         for(Groups o : groups) {
             if(o.Id == ID) {
                 return o;

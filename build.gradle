@@ -1,3 +1,4 @@
+version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
@@ -7,6 +8,17 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+configurations {
+    liquibase
 }
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'org.liquibase:liquibase-gradle-plugin:1.1.1'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+
+    liquibase 'org.liquibase:liquibase-core:3.2.2'
+    compile group: 'org.liquibase', name: 'liquibase-gradle-plugin', version: '1.2.4'
+}
+
+

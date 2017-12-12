@@ -21,26 +21,27 @@ public class Humans {
 
     }
 
-    public Humans(int Id, int Age, int GroupId,  String FirstName) {
+    public Humans(int Id,String FirstName, int Age, int GroupId ) {
         this.Id = Id;
+        this.FirstName = FirstName;
         this.Age = Age;
         this.GroupId = GroupId;
-        this.FirstName = FirstName;
+
     }
 
-    private static void getWorkersFromDB() {
+    private static void getHumansFromDB() {
         Connection con = Connect.connect();
         try {
             Statement statement = con.createStatement();
             ResultSet rs = statement.executeQuery("SELECT * FROM humans ");
             while (rs.next()) {
                 Humans nWorker = new Humans();
-                nWorker.GroupId = rs.getInt(1);
-                nWorker.Age =rs.getInt(2);
-                nWorker.Id =rs.getInt(3);
-                nWorker.FirstName =rs.getString(5);
+                nWorker.GroupId = rs.getInt(4);
+                nWorker.Age =rs.getInt(3);
+                nWorker.Id =rs.getInt(1);
+                nWorker.FirstName =rs.getString(2);
                 if(!humans.contains(nWorker)) {
-                    workerAddToList(nWorker);
+                    HumanAddToList(nWorker);
                 }
             }
             rs.close();
@@ -53,12 +54,12 @@ public class Humans {
         }
     }
 
-    private static void workerAddToList(Humans w) {
+    private static void HumanAddToList(Humans w) {
         humans.add(w);
     }
 
-    public static Humans getWorker(int ID) {
-        getWorkersFromDB();
+    public static Humans getHuman(int ID) {
+        getHumansFromDB();
         for (Humans w : humans) {
             if (w.Id == ID) {
                 return w;

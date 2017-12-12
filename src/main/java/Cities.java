@@ -18,27 +18,29 @@ public class Cities {
         Years = -1;
         Name = "Unknown";
     }
-    public Cities(int CountriesId,String Name, int Years, int Id ) {
-        this.CountriesId = CountriesId;
+    public Cities(int Id,String Name, int Years, int CountriesId ) {
+
         this.Id = Id;
-        this.Years = Years;
         this.Name = Name;
+        this.Years = Years;
+        this.CountriesId = CountriesId;
     }
-    private static void addDirectory(Cities d) {
+    private static void addCities(Cities d) {
         citiesList.add(d);
     }
-    private static void getDirectoriesFromDB() {
+    private static void getCitiesFromDB() {
         Connection con = Connect.connect();
         try {
             Statement statement = con.createStatement();
             ResultSet rs = statement.executeQuery("SELECT * FROM Cities");
             while(rs.next()) {
-                Cities nDir = new Cities();
-                nDir.Id = rs.getInt(2);
-                nDir.CountriesId =rs.getInt(1);
-                nDir.Name =rs.getString(3);
-                if(!citiesList.contains(nDir)) {
-                    addDirectory(nDir);
+                Cities nCit = new Cities();
+                nCit.Id = rs.getInt(1);
+                nCit.Years = rs.getInt(3);
+                nCit.CountriesId =rs.getInt(4);
+                nCit.Name =rs.getString(2);
+                if(!citiesList.contains(nCit)) {
+                    addCities(nCit);
                 }
             }
             rs.close();
@@ -50,8 +52,8 @@ public class Cities {
             Connect.closeConnection(con);
         }
     }
-    public static Cities getDirectory(int ID) {
-        getDirectoriesFromDB();
+    public static Cities getCity(int ID) {
+        getCitiesFromDB();
         for(Cities d: citiesList) {
             if(d.Id == ID) {
                 return  d;

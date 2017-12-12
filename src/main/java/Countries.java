@@ -16,10 +16,10 @@ public class Countries {
         Name = "Unknown";
         ContinentsId = -1;
     }
-    public Countries(int ContinentsId, int Id, String Name) {
-        this.ContinentsId =ContinentsId;
+    public Countries( int Id, String Name,int ContinentsId) {
         this.Id = Id;
         this.Name = Name;
+        this.ContinentsId =ContinentsId;
     }
     private static void countriesAdd(Countries c) {
         countriesList.add(c);
@@ -31,9 +31,9 @@ public class Countries {
             ResultSet rs = statement.executeQuery("SELECT * FROM Countries");
             while(rs.next()) {
                 Countries nCountry = new Countries();
-                nCountry.Id  = rs.getInt(2);
-                nCountry.Name = rs.getString(3);
-                nCountry.ContinentsId = rs.getInt(1);
+                nCountry.Id  = rs.getInt(1);
+                nCountry.Name = rs.getString(2);
+                nCountry.ContinentsId = rs.getInt(3);
                 if(!countriesList.contains(nCountry)) {
                     countriesAdd(nCountry);
                 }

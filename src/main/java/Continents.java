@@ -34,7 +34,7 @@ public class Continents {
                 nContinents.Name=rs.getString(2);
                 nContinents.Teritory=rs.getInt(3);
                 if(!companyList.contains(nContinents)){
-                    addCompany(nContinents);
+                    addContinent(nContinents);
                 }
             }
             rs.close();
@@ -46,11 +46,11 @@ public class Continents {
             Connect.closeConnection(con);
         }
     }
-    private static void addCompany(Continents c) {
+    private static void addContinent(Continents c) {
         companyList.add(c);
     }
 
-    public static Continents getCompany(int ID) {
+    public static Continents getContinent(int ID) {
         getContinentsFromDB();
         for(Continents c : companyList) {
             if(c.Id == ID) {
