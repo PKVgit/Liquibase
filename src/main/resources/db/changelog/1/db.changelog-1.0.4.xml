@@ -4,12 +4,18 @@
 
 <databaseChangeLog xmlns = "http://www.liquibase.org/xml/ns/dbchangelog/1.9" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"  >
-    <changeSet id="5" author="tiurinvalery@gmail.com" runOnChange="true" >
-        <createTable tableName ="typeofcompanies">
-            <column autoIncrement = "true" name = "typeofcompanyId" type ="BIGINT">
+    <changeSet id="5" author="kostyaqwerty065@gmail.com" runOnChange="true" >
+        <createTable tableName ="Groups">
+            <column name = "Id" type="INTEGER" autoIncrement = "true">
                 <constraints nullable="false" primaryKey="true"></constraints>
             </column>
-            <column name = "typeofcompany" type="VARCHAR(255)">
+            <column name="CityId" type="BIGINT" >
+                <constraints nullable="false"></constraints>
+            </column>
+            <column name = "Name" type="VARCHAR(50)">
+                <constraints nullable="false"></constraints>
+            </column>
+			<column name = "Purpose" type="VARCHAR(50)">
                 <constraints nullable="false"></constraints>
             </column>
         </createTable>

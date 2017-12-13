@@ -4,8 +4,8 @@ import java.sql.SQLException;
 
 public class Connect {
     static final String db_url ="jdbc:postgresql://127.0.0.1:5432/lab3";
-    static final String user = "lab";
-    static final String password = "4444";
+    static final String user = "Kostya";
+    static final String password = "123";
 
     static Connection connection = null;
 
@@ -42,6 +42,16 @@ public class Connect {
             con.close();
             System.out.println("Connection close");
         } catch(SQLException e) {
+            System.out.println("Problem with closing connection");
+        }
+    }
+
+    public static void disconnect(){
+        try{
+            connection.close();
+            System.out.println("Connection close");
+        } catch (SQLException e) {
+            e.printStackTrace();
             System.out.println("Problem with closing connection");
         }
     }
