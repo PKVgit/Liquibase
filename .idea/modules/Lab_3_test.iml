@@ -46,6 +46,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="Lab_3_main" scope="TEST" />
   </component>
   <component name="TestModuleProperties" production-module="Lab_3_main" />
 </module>
