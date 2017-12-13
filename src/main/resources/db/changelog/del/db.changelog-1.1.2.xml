@@ -1,0 +1,29 @@
+<databaseChangeLog xmlns = "http://www.liquibase.org/xml/ns/dbchangelog/1.9" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"  >
+    <changeSet id="9" author="kostyaqwerty065@gmail.com" runOnChange="true" >
+        <insert tableName="Countries">
+            <column name="Id" value="1"></column>
+            <column name="Name" value="Russia"></column>
+            <column name="ContinentId" value="1"></column>
+        </insert>
+        <rollback>
+            DELETE FROM Countries WHERE Name LIKE 'Russia'
+        </rollback>
+        <insert tableName="Countries">
+            <column name="Id" value="2"></column>
+            <column name="Name" value="Ukraine"></column>
+            <column name="ContinentId" value="2"></column>
+        </insert>
+        <rollback>
+            DELETE FROM Countries WHERE Name LIKE 'Ukraine'
+        </rollback>
+        <insert tableName="Countries">
+            <column name="Id" value="3"></column>
+            <column name="Name" value="China"></column>
+            <column name="ContinentId" value="3"></column>
+        </insert>
+        <rollback>
+            DELETE FROM Countries WHERE Name LIKE 'China'
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

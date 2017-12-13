@@ -25,16 +25,16 @@ public class Main {
 
         Database database = DatabaseFactory.getInstance().findCorrectDatabaseImplementation(new JdbcConnection(Connect.connection));
 
-        File change_create_tableOne = new File(ClassLoader.getSystemResource("db/changelog/create/db.changelog-1.0.1.xml").getFile());
-        File change_create_tableTwo = new File(ClassLoader.getSystemResource("db/changelog/create/db.changelog-1.0.2.xml").getFile());
-        File change_create_tableThree = new File(ClassLoader.getSystemResource("db/changelog/create/db.changelog-1.0.3.xml").getFile());
-        File change_create_tableFour = new File(ClassLoader.getSystemResource("db/changelog/create/db.changelog-1.0.4.xml").getFile());
-        File change_create_tableFive = new File(ClassLoader.getSystemResource("db/changelog/create/db.changelog-1.0.5.xml").getFile());
-        File change_dadoOne = new File(ClassLoader.getSystemResource("db/changelog/dado/db.changelog-1.1.1.xml").getFile());
-        File change_dadoTwo = new File(ClassLoader.getSystemResource("db/changelog/dado/db.changelog-1.1.2.xml").getFile());
-        File change_dadoThree = new File(ClassLoader.getSystemResource("db/changelog/dado/db.changelog-1.1.3.xml").getFile());
-        File change_dadoFour = new File(ClassLoader.getSystemResource("db/changelog/dado/db.changelog-1.1.4.xml").getFile());
-        File change_dadoFive = new File(ClassLoader.getSystemResource("db/changelog/dado/db.changelog-1.1.5.xml").getFile());
+        File change_create_tableOne = new File(ClassLoader.getSystemResource("db/changelog/cr/db.changelog-1.0.1.xml").getFile());
+        File change_create_tableTwo = new File(ClassLoader.getSystemResource("db/changelog/cr/db.changelog-1.0.2.xml").getFile());
+        File change_create_tableThree = new File(ClassLoader.getSystemResource("db/changelog/cr/db.changelog-1.0.3.xml").getFile());
+        File change_create_tableFour = new File(ClassLoader.getSystemResource("db/changelog/cr/db.changelog-1.0.4.xml").getFile());
+        File change_create_tableFive = new File(ClassLoader.getSystemResource("db/changelog/cr/db.changelog-1.0.5.xml").getFile());
+        File change_dadoOne = new File(ClassLoader.getSystemResource("db/changelog/del/db.changelog-1.1.1.xml").getFile());
+        File change_dadoTwo = new File(ClassLoader.getSystemResource("db/changelog/del/db.changelog-1.1.2.xml").getFile());
+        File change_dadoThree = new File(ClassLoader.getSystemResource("db/changelog/del/db.changelog-1.1.3.xml").getFile());
+        File change_dadoFour = new File(ClassLoader.getSystemResource("db/changelog/del/db.changelog-1.1.4.xml").getFile());
+        File change_dadoFive = new File(ClassLoader.getSystemResource("db/changelog/del/db.changelog-1.1.5.xml").getFile());
         File change_setRaw = new File(ClassLoader.getSystemResource("db/changelog/SetRaw/db.changelog-0.0.0.xml").getFile());
         File change_updateRaw = new File(ClassLoader.getSystemResource("db/changelog/UpdateRaw/db.changelog-1.2.5.1.xml").getFile());
         File change_updateData = new File(ClassLoader.getSystemResource("db/changelog/UpdateData/db.changelog-1.5.5.xml").getFile());
