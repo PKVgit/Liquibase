@@ -1,0 +1,17 @@
+
+ <databaseChangeLog xmlns = "http://www.liquibase.org/xml/ns/dbchangelog/1.9" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+    <changeSet id="1" author="kostyaqwerty065@gmail.com" runOnChange="true" >
+        <createTable tableName ="Continents">
+            <column autoIncrement = "true" name = "Id" type ="INTEGER">
+                <constraints nullable="false" primaryKey="true"></constraints>
+            </column>
+            <column name="Name" type="VARCHAR(50)">
+                <constraints nullable="false"></constraints>
+            </column>
+            <column name="Teritory" type="INTEGER">
+                <constraints nullable="false"></constraints>
+            </column>
+        </createTable>
+    </changeSet>
+ </databaseChangeLog>

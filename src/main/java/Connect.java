@@ -3,8 +3,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Connect {
-    static final String db_url ="jdbc:postgresql://127.0.0.1:5432/lab3";
-    static final String user = "Kostya";
+    static final String db_url ="jdbc:postgresql://127.0.0.1:5432/Earth";
+    static final String user = "postgres";
     static final String password = "123";
 
     static Connection connection = null;

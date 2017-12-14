@@ -1,0 +1,24 @@
+<databaseChangeLog xmlns = "http://www.liquibase.org/xml/ns/dbchangelog/1.9" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"  >
+    <changeSet id="10" author="kostyaqwerty065@gmail.com" runOnChange="true" >
+        <insert tableName="Cities">
+            <column name="CountryId" value="1"></column>
+        </insert>
+        <rollback>
+            DELETE FROM Cities WHERE CountryId = 1
+        </rollback>
+        <insert tableName="Cities">
+            <column name="CountryId" value="2"></column>
+        </insert>
+        <rollback>
+            DELETE FROM Cities WHERE CountryId = 2
+        </rollback>
+        <insert tableName="Cities">
+            <column name ="CountryId" value="3"></column>
+        </insert>
+        <rollback>
+            DELETE FROM Cities WHERE CountryId = 3
+        </rollback>
+
+    </changeSet>
+</databaseChangeLog>

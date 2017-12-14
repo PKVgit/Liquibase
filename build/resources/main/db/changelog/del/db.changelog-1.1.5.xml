@@ -1,0 +1,32 @@
+<databaseChangeLog xmlns = "http://www.liquibase.org/xml/ns/dbchangelog/1.9" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"  >
+    <changeSet id="12" author="kostyaqwerty065@gmail.com" runOnChange="true" >
+        <insert tableName="Humans">
+            <column name="Id" value="1"></column>
+            <column name="GroupId" value="1"></column>
+            <column name="Age" value="19"></column>
+            <column name="FirstName" value="Max"></column>
+        </insert>
+        <rollback>
+            DELETE FROM Humans WHERE Id = 1
+        </rollback>
+        <insert tableName="Humans">
+            <column name="Id" value="2"></column>
+            <column name="GroupId" value="2"></column>
+            <column name="Age" value="19"></column>
+            <column name="FirstName" value="Max"></column>
+        </insert>
+        <rollback>
+            DELETE FROM Humans WHERE Id = 2
+        </rollback>
+        <insert tableName="Humans">
+            <column name="Id" value="3"></column>
+            <column name="GroupId" value="3"></column>
+            <column name="Age" value="19"></column>
+            <column name="FirstName" value="Max"></column>
+        </insert>
+        <rollback>
+            DELETE FROM Humans WHERE Id = 3
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
