@@ -13,10 +13,11 @@ public class Cities {
     private static List<Cities> citiesList = new ArrayList<Cities>();
 
     public Cities() {
-        CountriesId = -1;
+
         Id = -1;
         Years = -1;
         Name = "Unknown";
+        CountriesId = -1;
     }
     public Cities(int Id,String Name, int Years, int CountriesId ) {
 

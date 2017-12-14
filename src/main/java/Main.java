@@ -41,7 +41,7 @@ public class Main {
         File change_renameColumn = new File(ClassLoader.getSystemResource("db/changelog/renameColumn/db.changelog-1.3.5.xml").getFile());
         File change_newColumn = new File(ClassLoader.getSystemResource("db/changelog/NewColumn/db.changelog-1.6.5.xml").getFile());
         File change_newTable = new File(ClassLoader.getSystemResource("db/changelog/NewTable/db.changelog-1.4.5.1.xml").getFile());
-        File change_dropAllTables = new File(ClassLoader.getSystemResource("db/changelog/DropAllTables/db.changelog-1.6.6.xml").getFile());
+        File change_dropAllTables = new File(ClassLoader.getSystemResource("db/changelog/DropAllTable/db.changelog-1.6.6.xml").getFile());
 
 
         Liquibase create_tableOne = new liquibase.Liquibase(change_create_tableOne.toString(), new FileSystemResourceAccessor(), database);

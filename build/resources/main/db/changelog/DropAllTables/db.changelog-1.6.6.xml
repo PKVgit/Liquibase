@@ -1,6 +1,6 @@
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
-   <changeSet id="DropAllTables" author="kostyaqwerty065@gmail.com">
+   <changeSet id="DropAllTables" author="kostyaqwerty@gmail.ru">
         <dropTable cascadeConstraints="true"
                    schemaName="public"
                    tableName="Continents" />
@@ -14,7 +14,7 @@
         <dropTable cascadeConstraints="true"
                    schemaName="public"
                    tableName="Groups" />
-	    <dropTable cascadeConstraints="true"
+		<dropTable cascadeConstraints="true"
                    schemaName="public"
                    tableName="Humans" />
    </changeSet>
