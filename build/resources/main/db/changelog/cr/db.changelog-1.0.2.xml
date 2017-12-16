@@ -9,12 +9,13 @@
             <column name = "Id" type="INTEGER" autoIncrement = "true">
                 <constraints nullable="false" primaryKey="true"></constraints>
             </column>
+			<column name = "Name" type="VARCHAR(50)">
+                <constraints nullable="false"></constraints>
+            </column>
             <column name="ContinetId" type="BIGINT" >
                 <constraints nullable="false"></constraints>
             </column>
-            <column name = "Name" type="VARCHAR(50)">
-                <constraints nullable="false"></constraints>
-            </column>
+            
           </createTable>
     </changeSet>
 </databaseChangeLog>

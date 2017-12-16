@@ -9,7 +9,7 @@
             DELETE FROM Groups WHERE Name LIKE 'Honests'
         </rollback>
         <insert tableName="Groups">
-            <column name=  "Name" value="Destroys"></column>
+            <column name = "Name" value="Destroys"></column>
         </insert>
         <rollback>
             DELETE FROM Groups WHERE Name LIKE 'Destroys'

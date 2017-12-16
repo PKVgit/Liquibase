@@ -5,13 +5,13 @@
            <column name = "Id" type="INTEGER" autoIncrement = "true">
                 <constraints nullable="false" primaryKey="true"></constraints>
             </column>
-            <column name="GroupId" type="BIGINT" >
-                <constraints nullable="false"></constraints>
-            </column>
             <column name = "FirstName" type="VARCHAR(50)">
                 <constraints nullable="false"></constraints>
             </column>
 			<column name = "Age" type="INTEGER">
+                <constraints nullable="false"></constraints>
+            </column>
+            <column name="GroupId" type="BIGINT" >
                 <constraints nullable="false"></constraints>
             </column>
         </createTable>
